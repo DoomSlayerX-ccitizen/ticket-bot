@@ -1,3 +1,4 @@
+from keep_alive import keep_alive
 import discord
 from discord.ext import commands
 import os
@@ -52,4 +53,5 @@ async def reload(ctx, extension):
     await bot.reload_extension(f"cogs.{extension}")
     await ctx.send(f"✅ Reloaded `{extension}`")
 
+keep_alive()
 bot.run(Config.TOKEN)
